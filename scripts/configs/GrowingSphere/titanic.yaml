@@ -1,0 +1,29 @@
+attack_method_cls: ModelExtractionCF
+attack_ml_args:
+  loss: binary_crossentropy
+  lr: 0.01
+  metrics:
+  - accuracy
+cat_constraints_fn: softmax
+cf_args: {}
+cf_method_cls: GrowingSphere
+cfg_name: GrowingSphere/titanic.yaml
+data: titanic
+global_seed: 42
+logger_type: local
+n_queries: 128
+save_cfg: true
+watermark_conifg:
+  alpha: 2.5
+  batch_size: 64
+  eps: 0.05
+  init: zeros
+  k: 10
+  lr: 0.03
+  n_ensembels: 4
+  perturb_categorical: false
+  random_perturbation: false
+  seed: 0
+  steps: 50
+  use_test_only: true
+  use_vmap: true

@@ -1,0 +1,47 @@
+attack_method_cls: ModelExtractionCF
+attack_ml_args:
+  loss: binary_crossentropy
+  lr: 0.01
+  metrics:
+  - accuracy
+cat_constraints_fn: softmax
+cf_args:
+  max_steps: 500
+  n_search_samples: 500
+  step_size: 0.05
+  vae_layers:
+  - 20
+  - 16
+  - 14
+  - 12
+  - 5
+  vae_lr: 0.005
+cf_method_cls: CCHVAE
+cfg_name: CCHVAE/heloc.yaml
+data: heloc
+detect_config:
+  frac: 0.3
+  tau: 0.05
+global_seed: 42
+logger_type: local
+n_queries: 128
+save_cfg: false
+use_default_exps: false
+watermark_conifg:
+  alpha: 3
+  batch_size: 128
+  eps: 0.05
+  init: zeros
+  k: 5
+  lambdas:
+  - 2.0
+  - 1.0
+  - 1.5
+  lr: 0.1
+  n_ensembels: 32
+  perturb_categorical: false
+  random_perturbation: false
+  seed: 0
+  steps: 50
+  use_test_only: true
+  use_vmap: true
