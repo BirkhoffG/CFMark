@@ -1,6 +1,8 @@
 # Watermarking Counterfactual Explanations
 
-This codebase contains code to reproduce our paper submitted to NeurIPS 2024.
+[![Arxiv](https://img.shields.io/badge/Arxiv-2405.18671-orange)](https://arxiv.org/pdf/2405.18671.pdf)
+
+This codebase contains code to reproduce the paper "[Watermarking Counterfactual Explanations](http://arxiv.org/abs/2405.18671)".
 
 ## Install
 
